@@ -102,6 +102,25 @@ Reglas:
 - Cada módulo se registra con su propio `*.module.ts` de NestJS en `infrastructure/`, enlazando puertos con adaptadores.
 - El `app.module.ts` actual de la plantilla se refactoriza hacia esta estructura al crear el primer módulo.
 
+## Código limpio y principios SOLID
+
+Todo el código nuevo se escribe con enfoque en código limpio y principios SOLID:
+
+- **S — Responsabilidad única:** cada clase, función y componente tiene un solo motivo para cambiar.
+- **O — Abierto/cerrado:** extender el comportamiento añadiendo código nuevo, no modificando el existente.
+- **L — Sustitución de Liskov:** las implementaciones deben poder reemplazar a su interfaz sin romper a quien las usa.
+- **I — Segregación de interfaces:** interfaces pequeñas y específicas en lugar de interfaces grandes.
+- **D — Inversión de dependencias:** depender de abstracciones (puertos), no de implementaciones concretas.
+
+Prácticas de código limpio:
+- Nombres claros y descriptivos que revelen la intención; evitar abreviaturas.
+- Funciones cortas que hagan una sola cosa, con pocos parámetros.
+- Sin duplicación (DRY) ni código muerto; sin números o textos "mágicos" (usar constantes con nombre).
+- Preferir composición sobre herencia.
+- Comentar solo el porqué cuando no sea evidente, no el qué; el código debe explicarse por sí mismo.
+- Manejar errores de forma explícita; no silenciar excepciones.
+- Tipado estricto en TypeScript: evitar `any`.
+
 ## Convenciones
 
 - Seguir el estilo del código existente (nombres, comentarios, idioma de cada archivo).
